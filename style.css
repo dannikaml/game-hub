@@ -21,3 +21,19 @@ header {
 h1 {
     
 }
+
+aside {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0px 15px 16px;
+}
+
+hr.rounded {
+    margin-top: 10%;
+    border-top: 5px solid #bbb;
+    border-radius: 3px;
+
+  }
+
+
+  
