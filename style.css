@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d3c09f;
+    --secondary-color: #699384;
+    --tertiary-color: #314a46;
+    --text-color: black;
+}
+
+header {
+    display: flex;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #314a46;
+    color: white;
+}
+
+h1 {
+    
+}
