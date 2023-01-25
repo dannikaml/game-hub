@@ -8,6 +8,7 @@ var bookList = document.querySelector('#bookList')
 
 
 
+
 function generateSearch() {
     var ulElement = document.createElement("ul")
 
@@ -24,8 +25,8 @@ function generateSearch() {
         console.log(element)
         var liElement = document.createElement("li")
         var bookElement = document.createElement("p")
-       // liElement.textContent = `search ${element.search}, url: ${element.url}`
-       // ulElement.append(liElement)
+       liElement.textContent = `search ${element.search}, url: ${element.url}`
+        ulElement.append(liElement)
       }
       booksContainer.append(ulElement)
     });
