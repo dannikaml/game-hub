@@ -26,11 +26,7 @@ function generateSearch() {
         console.log(element)
         var liElement = document.createElement("li")
         var bookElement = document.createElement("p")
-<<<<<<< HEAD
        liElement.textContent = `search ${element.search}, url: ${element.url}`
-=======
-        liElement.textContent = `search ${element.search}, url: ${element.url}`
->>>>>>> ed5461c22c332cef1b5d23f952445faf702aab4c
         ulElement.append(liElement)
       }
       booksContainer.append(ulElement)
