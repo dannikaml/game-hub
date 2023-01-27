@@ -98,13 +98,3 @@ html {
     cursor: pointer;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 115%;
-    height: 2.5rem;
-    background-color: #d3c09f;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-
-}
