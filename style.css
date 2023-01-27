@@ -98,3 +98,21 @@ html {
     cursor: pointer;
 }
 
+.results {
+  background-color: #699384; 
+}
+
+.list-item {
+    margin-bottom: 10px;
+    padding: 1.5%;
+    border-radius: var(--border-radius);
+    background-color: var(--light-dark);
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .list-group {
+    padding: 0;
+    list-style: none;
+  }
+
