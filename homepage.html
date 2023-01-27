@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Book-Hub</title>
+</head>
+<body>
+    <header class="container-header">
+       Book-Hub 
+    </header>
+    <aside>
+     <h1>A Home for Book Lovers</h1>
+      <div class="topnav">
+        <p>Search by Book, Author, or Category</p>
+                <input id="searchbox" type="text" placeholder="Search..">
+      </div>
+      
+      <!--reviews checkbox-->
+
+      <label class="checkbox">
+        <input type="checkbox">
+        Do you want to see the reviews?
+      </label>
+      <br>
+      <button id='searchBtn' class="button is-hovered">Search</button>
+      <hr class="rounded">
+      <div class="flex-column" id="books"></div>
+      <!-- save button -->
+      <button class="btn saveBtn">Save to Bookshelf</button>
+    </aside>
+    <section>
+      <div class="bookResults">test text</div>
+    </section>
+    <div class="text-center p-4">
+      <p class="card-body">
+        All about your search!
+      </p>
+
+
+    
+    <script src="./script.js" ></script>
+</body>
+</html>
