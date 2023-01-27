@@ -10,7 +10,9 @@
 }
 
 header {
-    display: flex;
+    display: inline-block;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
     margin: 0;
     text-align: center;
     width: 100%;
@@ -19,32 +21,41 @@ header {
 }
 
 h1 {
-    
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 8px;
+}
+
+.topnav {
+    display: inline-block;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin: 5px;
 }
 
 body {
     padding-left: 5px;
 }
 
-body::before {
+/* body::before {
     content: "";
-    position:absolute;
+    position: absolute;
     top: 0;
     bottom: 0;
-    left: 200px;
+    left: 275px;
     width: 5px;
     background-color:var(--tertiary-color);
-}
+} */
 
 
 hr.rounded {
     margin-top: 10%;
     border-top: 5px solid #bbb;
     border-radius: 3px;
-
   }
-
-
 
 text {
     color:var(--text-color)
@@ -57,9 +68,33 @@ aside {
   padding-right: 15px;
   float: left;
   background-color: var(--primary-color);
-  
 }
 
 html {
     background-color: var(--primary-color);
 }
+
+#searchInput {
+    border: 1px solid black;
+    border-radius: 3px;
+    float: right;
+    height: 25px;
+    width: 100%;
+    margin: 8px;
+}
+
+.btn {
+    background-color: #699384;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: black;
+    padding: 8px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #314a46;
+    cursor: pointer;
+}
+

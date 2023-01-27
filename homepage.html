@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="./style.css">
     
     <title>Book-Hub</title>
+    <figure class="image is-128by128">
+      <img src="./image/Screenshot 2023-01-26 at 8.24.31 PM.png">
+    </figure>
+    <style>
+      .verticalLine {
+        height: 100%;
+        margin: 0;
+        border-right: 5px solid #314a46;;
+        position: absolute;
+        left: 20%;
+      }
+    </style>
+    <div class="verticalLine"></div>
 </head>
 <body>
     <header class="container-header">
@@ -17,7 +30,7 @@
      <h1>A Home for Book Lovers</h1>
       <div class="topnav">
         <p>Search by Book, Author, or Category</p>
-                <input id="searchTextBox" type="text" placeholder="Search..">
+                <input id="searchbox" type="text" placeholder="Search..">
       </div>
       
       <!--reviews checkbox-->
@@ -27,7 +40,7 @@
         Do you want to see the reviews?
       </label>
       <br>
-      <button id='searchInput' class="button is-hovered">Search</button>
+      <button id='searchBtn' class="button is-hovered">Search</button>
       <hr class="rounded">
       <div class="flex-column" id="books"></div>
       <!-- save button -->
@@ -40,9 +53,6 @@
       <p class="card-body">
         All about your search!
       </p>
-
-
-    
     <script src="./script.js" ></script>
 </body>
 </html>
