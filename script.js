@@ -1,8 +1,9 @@
-var bookSearchApi = 'https://openlibrary.org/works/OL15626917W.json' ;
+var searchInput = document.querySelector('#searchInput');
+var bookSearchApi = `https://openlibrary.org/search.json?q=${searchInput}`;
 var bookshelfSave = [];
 var booksContainer = document.getElementById('books')
 
-var searchInput = document.querySelector('#search');
+
 var searchResult = document.querySelector('#bookResults');
 var bookList = document.querySelector('#bookList')
 
@@ -31,5 +32,3 @@ function generateSearch() {
     });
 }
 searchInput.addEventListener('click', generateSearch);
-
-
