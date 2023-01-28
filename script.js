@@ -72,15 +72,7 @@ var displaySearch = function (docs, searchTerm) {
     var statusEl = document.createElement('span');
     statusEl.classList = 'flex-row align-center';
 
-    if (docs[i].open_issues_count > 0) {
-      statusEl.innerHTML =
-        "<i class='results'></i>" + docs[i].open_issues_count + ' issue(s)';
-    } else {
-      statusEl.innerHTML = "<i class='results'></i>";
-    }
-
-    bookEl.appendChild(statusEl);
-
+    
     booksContainer.appendChild(bookEl);
   }
 };
