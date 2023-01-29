@@ -76,44 +76,26 @@ var displaySearch = function (apiDataResponse, event) {
 
     console.log('i am in the else statement');
   }
-}
-
-//    // something is wrong here
-//     for (var i = 0; i < apiDataResponse.docs.length; i++) {
-//       var bookTitle = apiDataResponse[i] + '/' + apiDataResponse[i];
-//       // not getting to this console log
-//       console.log('bookTitle', bookTitle);
 
 
-//       document.getElementById("books-container").innerHTML = 
+   // something is wrong here
+   for (let index = 0; index < apiDataResponse.docs.length; index++) {
+        const element = apiDataResponse.docs[index];
+        console.log(element)
+        var liElement = document.createElement("li")
+        var ulElement = document.createElement("p")
+        liElement.textContent = `search: ${element.key}, url: ${element.title}`
+        ulElement.append(liElement)
+      }
+      booksContainer.append(ulElement)
     
-
-
+    }
     
-// // searchBtnEl.addEventListener('click', generateSearch);
+    
+// searchBtnEl.addEventListener('click', generateSearch);
 form.addEventListener("submit", formSubmitHandler);
 
-
-
-
-
-
-
-
-
-
-// fetch(bookSearchURL)
-//     .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data, item) {
-//     console.log(searchValue);
-//     console.log(data);
-
-  
-//     });
-// }
-
+    
 
 
 
