@@ -71,21 +71,25 @@ var displaySearch = function (apiDataResponse, event) {
     booksContainer.textContent = 'Search not found.';
   } else {
      apiDataResponse.docs.map(function(book) {
-      console.log(book);
+      //console.log(book);
      })
 
     console.log('i am in the else statement');
   }
 
-
    // something is wrong here
    for (let index = 0; index < apiDataResponse.docs.length; index++) {
+    var ulElement = document.createElement('div');
+    ulElement.classList = 'list-group flex-row justify-space-between align-center';
+    //console.log('WHAT IS HAPPENING?');
+
         const element = apiDataResponse.docs[index];
-        console.log(element)
-        var liElement = document.createElement("li")
-        var ulElement = document.createElement("p")
-        liElement.textContent = `search: ${element.key}, url: ${element.title}`
+       // console.log(element, "CAN YOU SEE ME?");
+
+        var liElement = document.createElement("div");
+        liElement.innerHTML = `Book Title: ${element.title}, Author Work Key: ${element.key}`;
         ulElement.append(liElement)
+        //console.log("YOU BETTER BE THERE")
       }
       booksContainer.append(ulElement)
     

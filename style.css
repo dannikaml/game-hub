@@ -112,8 +112,17 @@ html {
   }
 
   .list-group {
-    padding: 0;
-    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 8px;
+    margin-top: 20px;
+    border: 1px #699384;
+    margin-bottom: 10px;
+    font-size: 16px;
+    
   }
 
   .show-result {
