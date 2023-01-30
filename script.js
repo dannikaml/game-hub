@@ -29,6 +29,8 @@ function generateSearch() {
 
     console.log(searchValue)
     console.log(data);
+    localStorage.setItem('bookKey',searchValue)
+    localStorage.getItem('bookKey')
    
 
 resultsEl.append.data
