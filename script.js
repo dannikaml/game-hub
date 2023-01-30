@@ -64,12 +64,17 @@ var formSubmitHandler = function (event) {
 }
 
 var displaySearch = function (apiDataResponse, event) {
-  console.log('apiDataResponse.length: ---WHERE AM I? ', apiDataResponse.docs.length);
+  console.log('apiDataResponse.length: ---WHERE AM I? ', apiDataResponse.length);
+
+  var ulElement = document.createElement('div');
+    ulElement.classList = 'list-group';
+    console.log('WHAT IS HAPPENING?');
+  
   if (apiDataResponse.docs.length === 0) {
     booksContainer.textContent = 'Search not found.';
   } else {
      apiDataResponse.docs.map(function(book) {
-      console.log(book);
+      //console.log(book);
      })
 
     console.log('i am in the else statement');
@@ -77,21 +82,19 @@ var displaySearch = function (apiDataResponse, event) {
 
    // something is wrong here
    for (let index = 0; index < apiDataResponse.docs.length; index++) {
-    var ulElement = document.createElement('div');
-    ulElement.classList = 'list-group';
-    console.log('WHAT IS HAPPENING?');
-
-        const element = apiDataResponse.docs[index];
+       const element = apiDataResponse.docs[index];
         console.log(element, "CAN YOU SEE ME?");
+    
 
         var liElement = document.createElement('span');
         liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
         ulElement.append(liElement)
-        console.log("YOU BETTER BE THERE")
-      }
+        console.log(liElement, "YOU BETTER BE THERE")
+      
       booksContainer.append(ulElement)
-      console.log("am i working?")
+      console.log(ulElement)
     
  }
+}
 // searchBtnEl.addEventListener('click', generateSearch);
 form.addEventListener("submit", formSubmitHandler);
