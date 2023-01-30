@@ -113,7 +113,7 @@ html {
 
   .list-group {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-family: 'Courier New', Courier, monospace;
     font-size: 26px;
     font-weight: bold;
@@ -122,7 +122,14 @@ html {
     border: 1px #699384;
     margin-bottom: 10px;
     font-size: 16px;
+    flex-direction: column;
+    padding: 1%;
     
+  }
+  
+ .list-group span {
+    padding: 1%;
+
   }
 
   .show-result {
