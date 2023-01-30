@@ -39,3 +39,9 @@ function generateSearch() {
     });
 }
 searchBtnEl.addEventListener('click', generateSearch);
+
+
+
+
+var reviewAuthUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?author=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
+var reviewTitleUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?title=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
