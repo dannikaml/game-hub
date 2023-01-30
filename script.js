@@ -4,8 +4,8 @@ var searchboxEl = document.querySelector("#searchbox");
 //var bookSearchApi = `https://openlibrary.org/search.json?q=${searchValue}`;
 var bookshelfSave = [];
 var booksContainer = document.querySelector("#books");
-
-
+var resultsEl = document.querySelector("bookResults");
+var homeBtn = document.querySelector("homeBtn");
 
 var searchResult = document.querySelector('#bookResults');
 var bookList = document.querySelector('#bookList');
@@ -24,9 +24,15 @@ function generateSearch() {
     return response.json();
   })
   .then(function (data) {
-    console.log(searchValue);
+   // var selectedData = data.
+
+
+    console.log(searchValue)
     console.log(data);
-    
+   
+
+resultsEl.append.data
+
     for (let index = 0; index < data.length; index++) {
         const element = data[index];
         console.log(element)
@@ -39,3 +45,4 @@ function generateSearch() {
     });
 }
 searchBtnEl.addEventListener('click', generateSearch);
+
