@@ -1,23 +1,30 @@
-var searchInput = document.querySelector('#searchInput');
-var bookSearchApi = `https://openlibrary.org/search.json?q=${searchInput}`;
+var searchBtnEl = document.querySelector('#searchBtn');
+var searchboxEl = document.querySelector("#searchbox");
+//var searchValue = searchbox.innerText.trim()
+//var bookSearchApi = `https://openlibrary.org/search.json?q=${searchValue}`;
 var bookshelfSave = [];
-var booksContainer = document.getElementById('books')
-var searchButton = document.getElementById('searchButton')
+var booksContainer = document.querySelector("#books");
+
+
 
 var searchResult = document.querySelector('#bookResults');
-var bookList = document.querySelector('#bookList')
+var bookList = document.querySelector('#bookList');
+console.log(searchboxEl)
 
 
 
 function generateSearch() {
+    var searchValue = searchboxEl.value.trim()
+    var bookSearchURL = `https://openlibrary.org/search.json?q=${searchValue}`;
+    console.log(searchValue)
     var ulElement = document.createElement("ul")
 
-    fetch(bookSearchApi)
+    fetch(bookSearchURL)
     .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    console.log('search input');
+    console.log(searchValue);
     console.log(data);
     
     for (let index = 0; index < 5; index++) {
@@ -31,12 +38,4 @@ function generateSearch() {
       booksContainer.append(ulElement)
     });
 }
-searchButton.addEventListener('click', generateSearch);
-
-
-
-
-
-var bookReview = `https://api.nytimes.com/svc/books/v3/reviews.json?author=${searchInput}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`;
-fetch(bookReview)
-console.log(bookReview)
+searchBtnEl.addEventListener('click', generateSearch);
