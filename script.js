@@ -1,7 +1,10 @@
 var searchBtnEl = document.querySelector('#searchBtn');
 var searchboxEl = document.querySelector("#searchbox");
-//var searchValue = searchbox.innerText.trim()
-//var bookSearchApi = `https://openlibrary.org/search.json?q=${searchValue}`;
+    console.log(searchboxEl);
+var form = document.getElementById('form');
+
+var booksContainer = document.querySelector("#books-container");
+var bookSearchTerm = document.querySelector('#search-term');
 var bookshelfSave = [];
 
 
@@ -18,9 +21,12 @@ var searchHandler = function (event) {
   if (searchInput) {
     generateSearch(searchInput);
 
-var searchResult = document.querySelector('#bookResults');
-var bookList = document.querySelector('#bookList');
-console.log(searchboxEl)
+    booksContainer.textContent = '';
+    searchboxEl.value = '';
+  } else {
+    alert('Search not found - Try Again');
+  }
+};
 
 var formSubmitHandler = function (event) {
   // Don't refresh the page
@@ -29,11 +35,12 @@ var formSubmitHandler = function (event) {
   console.log('submit event: ', event);
   console.log(event.target[0].value);
 
-function generateSearch() {
-    var searchValue = searchboxEl.value.trim()
-    var bookSearchURL = `https://openlibrary.org/search.json?q=${searchValue}`;
-    console.log(searchValue)
-    var ulElement = document.createElement("ul")
+  var searchValue = event.target[0].value;
+  var bookSearchURL = `https://openlibrary.org/search.json?q=${searchValue}`;
+  console.log('generateSearch searchValue: ', searchValue);
+
+  // update UI to show the search term
+  bookSearchTerm.innerText = event.target[0].value;
 
   // call the api
  fetch(bookSearchURL)
@@ -78,12 +85,9 @@ var displaySearch = function (apiDataResponse, event) {
        const element = apiDataResponse.docs[index];
         console.log(element, "CAN YOU SEE ME?");
     
-    for (let index = 0; index < data.length; index++) {
-        const element = data[index];
-        console.log(element)
-        var liElement = document.createElement("li")
-        var bookElement = document.createElement("p")
-        liElement.textContent = `search ${element.search}, url: ${element.url}`
+
+        var liElement = document.createElement('span');
+        liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
         ulElement.append(liElement)
         console.log(liElement, "YOU BETTER BE THERE")
       
