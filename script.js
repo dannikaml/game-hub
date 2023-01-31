@@ -113,14 +113,11 @@ var formSubmitHandler = function (event) {
       });
   // }
 }
-<<<<<<< HEAD
-=======
 
 //local sotrage
-localStorage.setItem('bookKey', searchValue)
-localStorage.getItem('bookKey')
+// localStorage.setItem('bookKey', searchValue)
+// localStorage.getItem('bookKey')
 
->>>>>>> main
 var displaySearch = function (apiDataResponse, event) {
   console.log('apiDataResponse.length: ---WHERE AM I? ', apiDataResponse.length);
 
@@ -143,18 +140,6 @@ var displaySearch = function (apiDataResponse, event) {
     const element = apiDataResponse.docs[index];
     console.log(element, "CAN YOU SEE ME?");
 
-<<<<<<< HEAD
-
-    var liElement = document.createElement('span');
-    liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
-    ulElement.append(liElement)
-    console.log(liElement, "YOU BETTER BE THERE")
-
-    booksContainer.append(ulElement)
-    console.log(ulElement)
-
-  }
-=======
         var liElement = document.createElement('span');
 
         var titleEl = document.createElement('h2');
@@ -190,7 +175,6 @@ var displaySearch = function (apiDataResponse, event) {
       console.log(ulElement)
     
  }
->>>>>>> main
 }
 
 // searchBtnEl.addEventListener('click', generateSearch);
