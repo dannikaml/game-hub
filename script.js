@@ -41,6 +41,9 @@ var formSubmitHandler = function (event) {
   var reviewTitleUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?title=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
   console.log('generateSearch searchValue: ', searchValue);
 
+  localStorage.setItem('bookKey', searchValue);
+  localStorage.getItem('bookKey');
+
   // update UI to show the search term
   bookSearchTerm.innerText = event.target[0].value;
   // if (document.getElementById("checkBox").checked == false) {
@@ -173,8 +176,3 @@ var displaySearch = function (apiDataResponse, event) {
 
 // searchBtnEl.addEventListener('click', generateSearch);
 form.addEventListener("submit", formSubmitHandler);
-
-
-
-
-
