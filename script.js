@@ -89,12 +89,12 @@ var formSubmitHandler = function (event) {
               if (reviewLink) {
                 let anchorEl = document.createElement("a")
                 anchorEl.href = reviewLink
-                anchorEl.textContent = `click here to see reviews for ${searchValue}`
+                anchorEl.textContent = `Click here <-- to see reviews for: ${searchValue}`
                 linkToReviewContainer.appendChild(anchorEl)
                 console.log("I want to see reviews")
               } else {
-                let noReviewEl = document.createElement("p")
-              noReviewEl.textContent = `No reviews currently available for ${searchValue}`
+                let noReviewEl = document.createElement("h3")
+              noReviewEl.textContent = `No reviews currently available for: ${searchValue}`
               linkToReviewContainer.appendChild(noReviewEl)
               }
              
@@ -123,22 +123,19 @@ var displaySearch = function (apiDataResponse, event) {
 
   var ulElement = document.createElement('div');
   ulElement.classList = 'list-group';
-  console.log('WHAT IS HAPPENING?');
 
   if (apiDataResponse.docs.length === 0) {
     booksContainer.textContent = 'Search not found.';
   } else {
     apiDataResponse.docs.map(function (book) {
-      //console.log(book);
+    
     })
 
-    console.log('i am in the else statement');
   }
 
   // something is wrong here
   for (let index = 0; index < apiDataResponse.docs.length; index++) {
     const element = apiDataResponse.docs[index];
-    console.log(element, "CAN YOU SEE ME?");
 
         var liElement = document.createElement('span');
 
@@ -167,12 +164,9 @@ var displaySearch = function (apiDataResponse, event) {
         liElement.appendChild(languageEl)
         liElement.appendChild(publisherEl)
         liElement.appendChild(pagesEl)
-        //liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
         ulElement.append(liElement)
-        console.log(liElement, "YOU BETTER BE THERE")
       
       booksContainer.appendChild(ulElement)
-      console.log(ulElement)
     
  }
 }
@@ -180,9 +174,6 @@ var displaySearch = function (apiDataResponse, event) {
 // searchBtnEl.addEventListener('click', generateSearch);
 form.addEventListener("submit", formSubmitHandler);
 
-
-// var reviewAuthUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?author=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
-// var reviewTitleUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?title=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
 
 
 
