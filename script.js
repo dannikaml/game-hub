@@ -63,6 +63,10 @@ var formSubmitHandler = function (event) {
 });
 }
 
+//local sotrage
+localStorage.setItem('bookKey', searchValue)
+localStorage.getItem('bookKey')
+
 var displaySearch = function (apiDataResponse, event) {
   console.log('apiDataResponse.length: ---WHERE AM I? ', apiDataResponse.length);
 
