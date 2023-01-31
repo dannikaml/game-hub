@@ -24,7 +24,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     margin: 8px;
 }
@@ -61,36 +61,52 @@ text {
     color:var(--text-color)
 }
 
+form {
+ width: 100%;
+}
+
 aside {
-  width: 19%;
+  width: 20%;
   padding-left: 15px;
-  margin-left: 18px;
   padding-right: 15px;
   float: left;
-  background-color: var(--primary-color);
+}
+
+p {
+margin-bottom: 10px;
+
 }
 
 html {
     background-color: var(--primary-color);
 }
 
-#searchInput {
+/* #searchInput {
     border: 1px solid black;
     border-radius: 3px;
     float: right;
     height: 25px;
     width: 100%;
     margin: 8px;
-}
+} */
 
-.btn {
+.searchBtn {
     background-color: #699384;
     border: 1px solid white;
     border-radius: 3px;
-    color: black;
-    padding: 8px 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 6px 18px;
+    font-family: monospace;
+    font-size: 14px;
+    width: 100%;
+} 
+
+.btn {
+    background-color: #699384;
+    border-radius: 3px;
+    padding: 6px 8px;
+    font-family: monospace;
     font-size: 15px;
+    width: 100%;
 }
 
 .btn:hover {
@@ -98,3 +114,52 @@ html {
     cursor: pointer;
 }
 
+.results {
+  background-color: #699384; 
+}
+
+.searchBox {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px 18px;
+    font-family: monospace;
+    font-size: 14px;
+    width: 100%;
+    
+   
+  } 
+
+  .list-group {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 8px;
+    margin-top: 20px;
+    border: 1px #699384;
+    margin-bottom: 10px;
+    font-size: 16px;
+    flex-direction: column;
+    padding: 1%;
+    
+  }
+  
+ .list-group span {
+    padding: 1%;
+    border: 10px solid #699384;
+    background-color: #cfccc770;
+
+
+  }
+
+  .show-result {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 8px;
+    line: var(--tertiary-color);
+
+  }
