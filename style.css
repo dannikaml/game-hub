@@ -66,12 +66,15 @@ form {
 }
 
 aside {
-  width: 19%;
+  width: 20%;
   padding-left: 15px;
-  margin-left: 18px;
   padding-right: 15px;
   float: left;
-  background-color: var(--primary-color);
+}
+
+p {
+margin-bottom: 10px;
+
 }
 
 html {
@@ -122,6 +125,7 @@ html {
     font-family: monospace;
     font-size: 14px;
     width: 100%;
+    
    
   } 
 
@@ -156,5 +160,6 @@ html {
     font-size: 26px;
     font-weight: bold;
     margin: 8px;
+    line: var(--tertiary-color);
 
   }

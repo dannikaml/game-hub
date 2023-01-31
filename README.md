@@ -7,8 +7,10 @@
 ### Usage
 ***
 
-### Api Link
+### Api Links
 - https://openlibrary.org/dev/docs/api/search
+- https://bulma.io/
+
 
 
 
@@ -36,5 +38,8 @@ Google:
 w3schools:
 - https://www.w3schools.com/tags/att_button_type.asp
 - https://www.w3schools.com/js/js_loop_for.asp
+
+javascript.info:
+- https://javascript.info/array
 
 

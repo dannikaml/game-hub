@@ -30,7 +30,7 @@
      <h1>A Home for Book Lovers...</h1>
      <form id="form">
       <div class="topnav">
-        <p>Search by Book, Author, or Category</p>
+        <p>Search by Book, Author, or Category to find facts about your favorite topics!</p>
           <input id="searchbox" class="searchBox" type="text" placeholder="Search..">
       </div>
     
@@ -43,9 +43,12 @@
       <button type="submit" id='searchBtn' class="btn is-hovered searchBtn">Search</button>
       <hr class="rounded">
       <div class="flex-column" id="books"></div>
-      <!-- save button -->
-      <button class="btn saveBtn">Save to Bookshelf</button>
     </form>
+
+     <!-- save button -->
+     <!-- <button id='searchHistory' class="btn bookshelfBtn">Save to Bookshelf</button> -->
+     <div class="searchBtn" id="searchHistory"></div>
+
     </aside>
      <div>
       <h2 class="show-result">Showing Results for: <span id="search-term"></span></h2>
