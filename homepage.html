@@ -36,8 +36,8 @@
     
       <!--reviews checkbox-->
       <label class="checkbox">
-        <input type="checkbox">
-        Do you want to see the reviews?
+        <input type="checkbox" id="checkbox">
+        Would you like to see the New York Times reviews for your search?
       </label>
       <br>
       <button type="submit" id='searchBtn' class="btn is-hovered searchBtn">Search</button>
@@ -52,7 +52,11 @@
      
     </aside>
      <div>
+      
       <h2 class="show-result">Showing Results for: <span id="search-term"></span></h2>
+      <div id="linkToReview">
+
+      </div>
       <div class="show-result "></div>
   
         <div id="books-container" class="list-group"></div>
