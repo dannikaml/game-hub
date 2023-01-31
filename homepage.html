@@ -14,24 +14,28 @@
        Book-Hub 
     </header>
     <aside>
-     <h1>A Home for Book Lovers</h1>
+     <h1>A Home for Book Lovers...</h1>
+     <form id="form">
       <div class="topnav">
         <p>Search by Book, Author, or Category</p>
-                <input id='searchInput' type="text" placeholder="Search..">
+                <input id="searchbox" type="text" placeholder="Search..">
       </div>
-      
+    
       <!--reviews checkbox-->
-
       <label class="checkbox">
         <input type="checkbox">
         Do you want to see the reviews?
       </label>
       <br>
-      <button id='searchButton' class="button is-hovered">Search</button>
+      <button id='searchBtn' class="button is-hovered">Search</button>
       <hr class="rounded">
       <div class="flex-column" id="books"></div>
-      <!-- save button -->
-      <button class="btn saveBtn">Save to Bookshelf</button>
+    </form>
+
+     <!-- save button -->
+     <!-- <button id='searchHistory' class="btn bookshelfBtn">Save to Bookshelf</button> -->
+     <div class="searchBtn" id="searchHistory"></div>
+
     </aside>
     <section>
       <div class="bookResults">test text</div>
@@ -40,9 +44,6 @@
       <p class="card-body">
         All about your search!
       </p>
-
-
-    
     <script src="./script.js" ></script>
 </body>
 </html>
