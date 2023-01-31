@@ -87,8 +87,15 @@ var displaySearch = function (apiDataResponse, event) {
     
 
         var liElement = document.createElement('span');
-        liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
-        ulElement.append(liElement)
+        var titleEl = document.createElement('h3');
+        var subtitleEl = document.createElement('h3');
+        titleEl.textContent = `Book Title: ${element.title}` ;
+        var bookSubtitle = element.subtitle || "No subtitle";
+        subtitleEl.textContent = `Subtitle: ${bookSubtitle}`;
+        liElement.appendChild(titleEl)
+        liElement.appendChild(subtitleEl)
+        //liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
+        ulElement.appendChild(liElement)
         console.log(liElement, "YOU BETTER BE THERE")
       
       booksContainer.append(ulElement)
