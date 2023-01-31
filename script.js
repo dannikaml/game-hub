@@ -63,6 +63,10 @@ var formSubmitHandler = function (event) {
 });
 }
 
+//local sotrage
+localStorage.setItem('bookKey', searchValue)
+localStorage.getItem('bookKey')
+
 var displaySearch = function (apiDataResponse, event) {
   console.log('apiDataResponse.length: ---WHERE AM I? ', apiDataResponse.length);
 
@@ -87,11 +91,37 @@ var displaySearch = function (apiDataResponse, event) {
     
 
         var liElement = document.createElement('span');
-        liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
+
+        var titleEl = document.createElement('h2');
+        var subtitleEl =document.createElement('p');
+        var datePublishedEl =document.createElement('p');
+        var authorEl =document.createElement('p');
+        var languageEl =document.createElement('p');
+        var publisherEl =document.createElement('p');
+        var pagesEl =document.createElement('p');
+        var numPages = element.number_of_pages_median || "NA";
+        var bookSubtitle = element.subtitle || "No subtitle";
+
+        titleEl.textContent = `Book Title: ${element.title}`;
+        subtitleEl.textContent = `Subtitle: ${bookSubtitle}`;
+        datePublishedEl.textContent = `Date Published: ${element.publish_date}`;
+        authorEl.textContent = `Author: ${element.author_name}`;
+        languageEl.textContent = `Languages: ${element.language}`;
+        publisherEl.textContent = `Publisher: ${element.publisher}`;
+        pagesEl.textContent = `Number of Pages: ${numPages}`;
+
+        liElement.appendChild(titleEl)
+        liElement.appendChild(subtitleEl)
+        liElement.appendChild(datePublishedEl)
+        liElement.appendChild(authorEl)
+        liElement.appendChild(languageEl)
+        liElement.appendChild(publisherEl)
+        liElement.appendChild(pagesEl)
+        //liElement.innerHTML = `Book Title: ${element.title}, Subtitle: ${element.subtitle}, Date Published: ${element.publish_date}, Author: ${element.author_name}, Languages: ${element.language}, Publisher: ${element.publisher}, Number of Pages: ${element.number_of_pages_median}`;
         ulElement.append(liElement)
         console.log(liElement, "YOU BETTER BE THERE")
       
-      booksContainer.append(ulElement)
+      booksContainer.appendChild(ulElement)
       console.log(ulElement)
     
  }
