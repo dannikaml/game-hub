@@ -15,11 +15,13 @@ console.log(searchBoxEl)
 
 function generateSearch() {
     var searchValue = searchBoxEl.value.trim()
-    var bookSearchURL = `https://openlibrary.org/search.json?q=${searchValue}`;
+    // var bookSearchURL = `https://openlibrary.org/search.json?q=${searchValue}`;
+    var reviewTitleUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?title=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
     console.log(searchValue)
     var ulElement = document.createElement("ul")
 
-    fetch(bookSearchURL)
+    // fetch(bookSearchURL)
+    fetch(reviewTitleUrl)
     .then(function (response) {
     return response.json();
   })
@@ -43,5 +45,5 @@ searchBtnEl.addEventListener('click', generateSearch);
 
 
 
-var reviewAuthUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?author=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
-var reviewTitleUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?title=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
+// var reviewAuthUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?author=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
+// var reviewTitleUrl = `https://api.nytimes.com/svc/books/v3/reviews.json?title=${searchValue}&api-key=17ZICVyJ3VHMaorPzVeZgh3dxQ3c30aK`
