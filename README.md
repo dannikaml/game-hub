@@ -1,18 +1,18 @@
 # Book-Hub
 ***
 ## Description
-***
+
 Book-Hub is a webpage housing a search engine designed to retreive third party api data from OpenLibrary and display informational facts on books, authors and their respective categories/genres, as well create a link to a New York Times Review; if one is available. Then you can save your favorite searches to your "bookshelf" to visit again later. 
 
 ***
 ### Usage
-***
+
 To run a search engine for book/author informational facts. (great for book reports! - or comparing specific data)
 
 
 ***
 ### User Story
-***
+
 AS A user
 I WANT to visit a webpage with a search input to find information and facts about books and authors
 SO THAT I can learn new information on authors and their books
@@ -35,19 +35,19 @@ THEN I am able to add books to my "Bookshelf" that is saved to local storage
 
 ***
 ###
-***
+
 ![Page Screenshot](/image/Screenshot%202023-01-31%20002028.png)
 
 ***
 ### Deployed Site & GitHub Repo
-***
+
 Deployed Site: https://dannikaml.github.io/game-hub/
 GitHub Repo: https://github.com/dannikaml/game-hub
 
 
 ***
 ### Sources
-***
+
 
 MDNdocs:
 - https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
